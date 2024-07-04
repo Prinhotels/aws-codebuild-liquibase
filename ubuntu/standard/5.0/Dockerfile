@@ -146,10 +146,10 @@ RUN ln -s /liquibase/liquibase /usr/local/bin/liquibase \
 
 
 # Latest Liquibase Release Version
-ARG LIQUIBASE_VERSION=4.11.0
+ARG LIQUIBASE_VERSION=4.17.2 
 
 # Download, verify, extract
-ARG LB_SHA256=5ba5d7c155e9d6b3dace1a5290abc3adba26ea2199f54aae82f98507845b1b1b
+ARG LB_SHA256=85e910880006bdccfd7d6805a4601bff3311f4eadebc68081b4bfeac5ec7af40
 RUN set -x \
   && wget -O liquibase-${LIQUIBASE_VERSION}.tar.gz "https://github.com/liquibase/liquibase/releases/download/v${LIQUIBASE_VERSION}/liquibase-${LIQUIBASE_VERSION}.tar.gz" \
   && echo "$LB_SHA256  liquibase-${LIQUIBASE_VERSION}.tar.gz" | sha256sum -c - \
